@@ -1,0 +1,70 @@
+{
+    "name": "p5_blog_v1",
+    "version": "1.0.0",
+    "description": "Projet 5 d'openclassroom ",
+    "main": "gulpfile.js",
+    "scripts": {
+        "build": "",
+        "dev": "gulp stream",
+        "save": "gulp archiver"
+    },
+    "author": "Myrrdin",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^9.7.4",
+        "del": "^5.1.0",
+        "glob": "^7.1.6",
+        "gulp": "^4.0.2",
+        "gulp-gzip": "^1.4.2",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-plumber": "^1.2.1",
+        "gulp-postcss": "^8.0.0",
+        "gulp-sass": "^5.0.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-tar": "^3.1.0",
+        "gulp-watch": "^5.0.1",
+        "gulp-zip": "^5.0.1",
+        "modernizr": "^3.8.0",
+        "node-cron": "^2.0.3"
+    },
+    "engines": {
+        "npm": ">=6",
+        "node": ">=10"
+    },
+    "private": true,
+    "dependencies": {},
+    "directories": {
+        "test": "test"
+    },
+    "PjtStructure": {
+        "directories": [
+            [
+                "archive"
+            ],
+            [
+                "dist"
+            ],
+            [
+                "test"
+            ],
+            [
+                "task"
+            ],
+            [
+                "src",
+                [
+                    "/doc",
+                    "/js",
+                    "/img",
+                    "/scss",
+                    "/html"
+                ],
+                [
+                    "index.html",
+                    "404.html",
+                    "favicon.ico"
+                ]
+            ]
+        ]
+    }
+}

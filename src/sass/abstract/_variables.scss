@@ -1,0 +1,139 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+$color-primary--bleu: #11538D;
+$colorPrimary:#11538D;
+$sizeShadow: 12px;
+$blurShadow:20px;
+$borderRadius: 10px;
+$gradientDir: 135deg;
+$skillBg--bleu: linear-gradient($gradientDir, #11538D 0%, #499EE9 100%);
+$skillBg--orange: linear-gradient($gradientDir, #D74A0E 3.57%, #F48657 98.21%);
+$skillBg--vert: linear-gradient($gradientDir, #3DA80B 3.57%, #89F457 98.21%);
+$skillBg--rose: linear-gradient($gradientDir, #A80B98 3.57%, #F457E4 98.21%);
+$skillBg--purple: linear-gradient($gradientDir, #9F4CF3 0%, #D3AEFA 100%);
+$skillBg--shalala: linear-gradient(to right, #D66D75 0%, #E29587 100%);
+$skillBg--celestial: linear-gradient(to right, #6f7eff 0%, #C33764 100%);
+$skillBg--jaipur: linear-gradient(to right, #c5796d 0%, #4692ff 100%);
+$skillBg--radar: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+$skillBg--fireWatch: linear-gradient(to right, #cb2d3e, #ef473a);
+$skillBg--earthlike:linear-gradient(to right, #649173, #DBD5A4);
+
+/* Light theme */
+
+$light-C-background: #EFEFEF;
+$light-text-color--grey:#555;
+$light-text-color--black:#1a1a1a;
+$light-text-color--white:#FFF;
+$light-enhance-color--pink: #F457E4;
+$light-dark-grey: #C4C4C4;
+
+/* Dark theme */
+
+$dark-C-background: invert($light-C-background, 79%);
+$dark-text-color--grey:invert($light-text-color--grey, 79%);
+$dark-text-color--black:invert($light-text-color--black, 79%);
+$dark-text-color--white:invert($light-text-color--white, 79%);
+$dark-enhance-color--pink: invert($light-enhance-color--pink, 79%);
+$dark-dark-grey: invert($light-dark-grey, 79%);
+
+/* Grid*/
+
+$wrap-width:120rem;
+$grid-width: 114rem;
+$grid-v-gout: 8rem;
+
+/* Goutière verticale*/
+
+$grid-h-gout: 6rem;
+
+/* Goutière horizontale*/
+
+// Config file and project variables
+// ----------------
+// Breakpoints zone
+// ----------------
+// Warning: you should use your own values, regardless of the devices
+// Best practice is Mobile First: (min-width: $breakpoint)
+$tinny: 480px !default; // or 'em' if you prefer, of course
+$small: 576px !default;
+$medium: 768px !default;
+$large: 992px !default;
+$extra-large: 1200px !default;
+$xextra-large: 1300px !default;
+$breakpoints: ('tinny': (min-width: $tinny), 'small': (min-width: $small), 'medium': (min-width: $medium), 'large': (min-width: $large), 'huge': (min-width: $extra-large), 'xtra': (min-width:$xextra-large));
+// ----------
+// Fonts zone
+// ----------
+// Font families
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Lobster&display=swap');
+$font-family-base: 'Cabin',
+-apple-system,
+sans-serif !default; // system font stack
+$font-family-fa: normal normal normal 14px/1 FontAwesome;
+$font-family-headings: 'Lobster',
+cursive !default; // font for h1, h2.. h6
+$font-family-monospace: consolas,
+courier,
+monospace !default; // font for code and samples
+// Font sizes (1.6rem value is "16px" equivalent)
+$font-size-base: 1.6rem !default;
+$font-sizes: (base: (mobile: 1.4rem, desktop: $font-size-base),
+h1: (mobile: 2.8rem, desktop: 3.2rem),
+h2: (mobile: 2.4rem, desktop: 2.8rem),
+h3: (mobile: 2.0rem, desktop: 2.4rem),
+h4: (mobile: 1.8rem, desktop: 2.0rem),
+h5: (mobile: 1.6rem, desktop: 1.8rem),
+h6: (mobile: 1.4rem, desktop: 1.6rem)) !default;
+// Line heights
+$line-height-s: 1.3 !default;
+$line-height-base: 1.5 !default;
+$line-height-l: 1.7 !default;
+// Default margin-bottom
+$margin-bottom-base: 1rem !default;
+$headings-margin-bottom: $margin-bottom-base /2 !default;
+$paragraph-margin-bottom: $margin-bottom-base !default;
+// Font weights
+$weight-light: 200 !default;
+$weight-book: 300 !default;
+$weight-regular: 400 !default;
+$weight-medium: 500 !default;
+$weight-bold: 700 !default;
+// Activate hyphenation on small screens
+$hyphens: false !default;
+// ------------
+// Spacing zone
+// ------------
+// Number of grid-columns
+$cols: 12 !default;
+// Grid gutters (for .has-gutter-* classes)
+$grid-gutters: ('': 1rem,
+'-l': 2rem,
+'-xl': 4rem) !default;
+// Spacings
+$spacer-tiny: .5rem !default;
+$spacer-tiny-plus: .7rem !default;
+$spacer-small: 1rem !default;
+$spacer-small-plus: 1.5rem !default;
+$spacer-medium: 2rem !default;
+$spacer-medium-plus: 3rem !default;
+$spacer-large: 4rem !default;
+$spacer-large-plus: 6rem !default;
+$spacer-extra-large: 8rem !default;
+$spacer-extra-large-plus: 12rem !default;
+$spacer-ultra-large: 16rem !default;
+$spacer-ultra-large-plus: 20rem !default;
+// z-indexes
+$zindex-navigation: 1000 !default;
+$zindex-dropdown: 2000 !default;
+$zindex-popover: 3000 !default;
+$zindex-tooltip: 4000 !default;
+$zindex-modal: 5000 !default;
+$zindex-notification: 6000 !default;
+$zindex-debug: 7000 !default;

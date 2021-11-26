@@ -1,0 +1,189 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+/* pour pseudo class ::before et ::after*/
+
+@mixin pseudo {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+
+/* centrer un element*/
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin size($h, $w) {
+    height: $h;
+    width: $w;
+}
+
+
+/* Font*/
+
+@mixin font-face($style-name, $file, $family, $category:"") {
+    $filepath: "fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf") format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+    // %#{$style-name} {
+    //     font: {
+    //         @if $category !="" {
+    //             family: "#{$style-name}",
+    //             #{$category};
+    //         } @else {
+    //             family: "#{$style-name}";
+    //             weight: normal;
+    //         }
+    //     }
+    // }
+}
+
+
+/* responsive fluid pour les typos*/
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    & {
+        @each $property in $properties {
+            #{$property}: $min-value;
+        }
+        @media screen and (min-width: $min-vw) {
+            @each $property in $properties {
+                #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+        }
+        @media screen and (min-width: $max-vw) {
+            @each $property in $properties {
+                #{$property}: $max-value;
+            }
+        }
+    }
+}
+
+
+/* Ajout des préfix pour compatibilité*/
+
+@mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+
+/* Média query*/
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+    @if $raw-query {
+        $query: if(type-of($raw-query)=='string', unquote($raw-query), inspect($raw-query));
+        @media screen and #{$query} {
+            @content;
+        }
+    }
+    @else {
+        @error 'No value found for `#{$breakpoint}`. '+'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+
+/* Ajout de (...)*/
+
+@mixin text-shorten {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/**  Custome mixin**/
+
+@mixin rotateLoopP($className, $degStart, $n) {
+    $deg: 18*$n + $degStart;
+    .#{$className}--#{$n} {
+        @include prefixer(transform, rotate(#{$deg}))
+    }
+}
+
+@mixin rotateLoopN($className, $degStart, $n) {
+    $deg: $degStart - 15*$n;
+    .#{$className}--#{$n} {
+        @include prefixer(transform, rotate(#{$deg}));
+    }
+}
+
+@mixin customDelayTextLoader($className, $delayS, $n) {
+    $delay: $n*100 + $delayS;
+    .#{$className}--#{$n}>p {
+        @include prefixer(animation, popup 150ms ease both);
+        @include prefixer(animation-delay, $delay);
+    }
+}
+
+@mixin shadowSkeuemorph($theme, $action, $size: $sizeShadow) {
+    @if ($theme=="dark" and $action=="push") {
+        box-shadow: inset 5px 5px 5px invert(rgba(255, 255, 255, 0.8)), inset -5px -5px 10px invert(rgba(106, 106, 106, 0.8));
+    }
+    @else if ($theme=="dark" and $action=="nopush") {
+        box-shadow: #{$size} #{$size} #{$blurShadow} invert(rgba(255, 255, 255, 0.8), 79%),
+        -#{$size} -#{$size} #{$blurShadow} invert(rgba(0, 0, 0, 0.25), 79%);
+    }
+    @else if ($theme=="light" and $action=="nopush") {
+        box-shadow: #{$size} #{$size} #{$blurShadow} rgba(0, 0, 0, 0.25),
+        -#{$size} -#{$size} #{$blurShadow} rgba(255, 255, 255, 0.8);
+    }
+    @else if ($theme=="light" and $action=="push") {
+        box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(106, 106, 106, 0.8);
+    }
+}
+
+@mixin borderRadiusLinearGradient($color-border) {
+    border: double 2px transparent;
+    background-image: linear-gradient(to right, var(--bg-principal), var(--bg-principal)),
+    #{$color-border};
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
