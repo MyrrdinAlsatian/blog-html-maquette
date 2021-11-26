@@ -4,9 +4,10 @@
     "description": "Projet 5 d'openclassroom ",
     "main": "gulpfile.js",
     "scripts": {
-        "build": "",
+        "build": "gulp html",
         "dev": "gulp stream",
-        "save": "gulp archiver"
+        "save": "gulp archiver",
+        "sass": "gulp sassToCss"
     },
     "author": "Myrrdin",
     "license": "ISC",
@@ -25,7 +26,8 @@
         "gulp-watch": "^5.0.1",
         "gulp-zip": "^5.0.1",
         "modernizr": "^3.8.0",
-        "node-cron": "^2.0.3"
+        "node-cron": "^2.0.3",
+        "sass": "^1.43.5"
     },
     "engines": {
         "npm": ">=6",

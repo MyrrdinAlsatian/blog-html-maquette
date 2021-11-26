@@ -1,40 +1,15 @@
-/* Reset */
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    /* TODO:Better practice*/
-}
-
-
 /***/
 
 :root {
-    --color-primary: #{$color-primary--bleu};
-    --bg-principal: #{$light-C-background};
-    --bg-color-highlight: #{$light-enhance-color--pink};
-    --bg-dark-grey: #{$light-dark-grey};
-    --text-color-primary: #{$light-text-color--black};
-    --text-color-secondary: #{$light-text-color--grey};
-    --text-color-tertiary:#{$light-text-color--white};
-    --bg-form: rgba(239, 239, 239, 0.9);
-    transition: color 2s linear;
-    --grid-row: 8;
-    --grid-column: 8;
+    --text-color: #{$dark-400};
+    --title-section: #{$gray-400};
+
 }
 
-:root[data-theme="dark"] {
-    --bg-principal: #{$dark-C-background};
-    --bg-color-highlight: #{$dark-enhance-color--pink};
-    --bg-dark-grey:#{ $dark-dark-grey};
-    --text-color-primary: #{$dark-text-color--black};
-    --text-color-secondary: #{$dark-text-color--grey};
-    --text-color-tertiary:#{$dark-text-color--white};
-    --bg-form: rgba(63, 63, 63, 0.9);
-}
+
+    h1{
+        color: var(--title-section);
+    }
 
 html {
     font-size: 62.5%;
@@ -51,5 +26,4 @@ body {
 
 main {
     transition: color 0.5s ease-in, background 0.5s linear;
-    background: var(--bg-principal);
 }

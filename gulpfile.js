@@ -1,4 +1,4 @@
-//  import node framawork 
+//  import node framework 
 // const =  fs  require( "fs") ;
 // const = path require("path" ) ;
 
@@ -7,7 +7,7 @@ const pkg = require('./package.json');
 
 // gulp
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 
 const htmlminify = require('gulp-htmlmin');
@@ -70,12 +70,9 @@ const sassToCss = () => {
         .src(paths.css.src)
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([autoprefixer({
-            browsers: ['last 4 versions'],
-            cascade: false
+            overrideBrowserslist: ['last 4 versions']
         })]))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(paths.css.dest))
@@ -100,15 +97,15 @@ const archiver = () => {
 const stream = () => {
     return (
         watch(paths.css.src, sassToCss),
-        watch(paths.html.src, html),
+        watch(paths.html.src, html)
 
-        cron.schedule("00 00 */1 * * * *", () => {
-            console.log("Hourly ", new Date());
-            archiver()
-        }, {
-            scheduled: true,
-            timezone: "Europe/Rome"
-        })
+        // cron.schedule("00 00 */1 * * * *", () => {
+        //     console.log("Hourly ", new Date());
+        //     archiver()
+        // }, {
+        //     scheduled: true,
+        //     timezone: "Europe/Rome"
+        // })
     );
 
 };
