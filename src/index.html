@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="hero">
+    <header class="hero hero--default">
         <section class="hero__pick-up">
             <h1><span class="hero__pick-up-firstline">  Creative <span class="u-f-regular">Fullstack</span> </span> <span class="hero__pick-up-secondline" >Developpeur</span> </h1>
         </section>
@@ -32,7 +32,7 @@
            </span>
         </label>
         <div class="navigation__background">&nbsp;</div>
-        <nav class="navigation__nav" aria-label="mobile">
+        <nav class="navigation__nav" role="navigation" aria-label="mobile">
             <ul class="navigation__list">
                 <li class="navigation__item" > <a class="navigation__link" href="#">About me</a></li>
                 <li class="navigation__item" > <a class="navigation__link" href="#">Case study</a></li>
@@ -42,7 +42,7 @@
         </nav>
     </div>
     <div class="navigation navigation--desktop">
-        <nav class="navigation__nav" aria-label="main">
+        <nav class="navigation__nav" role="navigation" aria-label="main">
             <ul class="navigation__list">
                 <li class="navigation__item" > <a class="navigation__link" href="#">About me</a></li>
                 <li class="navigation__item" > <a class="navigation__link" href="#">Case study</a></li>
@@ -51,6 +51,13 @@
             </ul>
         </nav>
     </div>
+    <nav class="quick-link" role="navigation" aria-label="shortcut">
+        <ul class="quick-link__container">
+            <li class="quick-link__item"><a href="#"><i></i><span>Work</span></a></li>
+            <li class="quick-link__item"><a href="#"><i></i><span>Resume</span></a></li>
+            <li class="quick-link__item"><a href="#"><i></i><span>Contact</span></a></li>
+        </ul>
+    </nav>
     <div class="line_container">
         <div class="line line_active grid_active"></div>
         <div class="line line1 middle_line_js grid_active"></div>
