@@ -8,18 +8,49 @@
     <meta name="description" content="Portfolio intéractif ">
     <meta name="keyword" content="Intégrateur Css3 Html5 JavaScript">
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
-
-    <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-    <title>Jean-Baptiste Stephan Intégrateur Web</title>
+    <title>Jean-Baptiste Stephan Creative developer</title>
 </head>
 
 <body>
-    <h1>Test</h1>
-    <div class="test-darkmode"></div>
+    <header class="hero">
+        <section class="hero__pick-up">
+            <h1><span class="hero__pick-up-firstline">  Creative <span class="u-f-regular">Fullstack</span> </span> <span class="hero__pick-up-secondline" >Developpeur</span> </h1>
+        </section>
+        <section class="hero__names">
+            <p><span class="hero__names--nobg">Jean-Baptiste</span><span class="hero__names--dark" lang="ja-jp" >ステファン</span></p>
+            <p><span class="hero__names--dark" lang="ja-jp">ジーン・バプティスト</span><span class="hero__names--nobg">Stephan</span></p>
+        </section>
+    </header>
+    <div class="navigation navigation--mobile">
+        <input class="navigation__checkbox" type="checkbox" name="nav-toggle" id="nav-toggle">
+        <label class="navigation__button" for="nav-toggle">
+           <span class="navigation__icon">
+               &nbsp;
+           </span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav" aria-label="mobile">
+            <ul class="navigation__list">
+                <li class="navigation__item" > <a class="navigation__link" href="#">About me</a></li>
+                <li class="navigation__item" > <a class="navigation__link" href="#">Case study</a></li>
+                <li class="navigation__item" > <a class="navigation__link" href="#">Blog</a></li>
+                <li class="navigation__item" > <a class="navigation__link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="navigation navigation--desktop">
+        <nav class="navigation__nav" aria-label="main">
+            <ul class="navigation__list">
+                <li class="navigation__item" > <a class="navigation__link" href="#">About me</a></li>
+                <li class="navigation__item" > <a class="navigation__link" href="#">Case study</a></li>
+                <li class="navigation__item" > <a class="navigation__link" href="#">Blog</a></li>
+                <li class="navigation__item" > <a class="navigation__link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="line_container">
         <div class="line line_active grid_active"></div>
         <div class="line line1 middle_line_js grid_active"></div>
@@ -36,7 +67,9 @@
         <div class="line line12 middle_line_js grid_active"></div>
         <div class="line line_active grid_active"></div>
     </div>
-
+    <main>
+        Content
+    </main>
 </body>
 
 </html>

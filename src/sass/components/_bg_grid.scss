@@ -5,13 +5,22 @@
     height: 100vh;
     display: flex;
     justify-content: space-between;
+    top: 0;
   
     .line {
       height: 0%;
-      border-left: solid 0.5px var(--lineColor);
+      border-left: solid 0.5px var(--line-color);
     }
     .line_active {
       height: 100%;
+    }
+    @for $i from 4 through 12 {
+      .line#{$i}{
+        display: none;
+        @include respond-to(medium){
+            display: block;
+          }
+      }
     }
   }
   .grid_active {

@@ -3,7 +3,9 @@
 :root {
     --text-color: #{$dark-400};
     --title-section: #{$gray-400};
-
+    --line-color: #{$lineColor};
+    --text-font: 'Raleway';
+    --gap-body: 10vw;
 }
 
 
@@ -21,9 +23,15 @@ html {
 }
 
 body {
+    background: $off-white;
     box-sizing: border-box;
+   
+
 }
 
 main {
+    width: 100vw;
+    overflow: hidden;
+    padding: 0 var(--gap-body);
     transition: color 0.5s ease-in, background 0.5s linear;
 }

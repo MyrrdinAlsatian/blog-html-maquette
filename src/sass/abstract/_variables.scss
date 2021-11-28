@@ -31,12 +31,15 @@ $error-400: hsl(338, 100%, 46%); //#EB0055
 
 $warning-400: hsl(40, 89%, 60%); //#F4B740
 
+
+$lineColor: hsla(0,0%,0%,5%);
+
 /*Font*/
 @import url("https://fonts.googleapis.com/css2?family=Cabin&family=Raleway&family=Source+Code+Pro&display=swap");
 
-$font-family-heading: "Raleway", sans-serif;
-$font-family-body: "Cabin", sans-serif;
-$font-family-code: "Source Code Pro", monospace;
+$heading-font-family: "Raleway", sans-serif;
+$body-font-family: "Cabin", sans-serif;
+$code-font-family: "Source Code Pro", monospace;
 
 $font-weight-regular: 400;
 $font-weight-bold: 700;

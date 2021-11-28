@@ -120,7 +120,7 @@
     $raw-query: map-get($breakpoints, $breakpoint);
     @if $raw-query {
         $query: if(type-of($raw-query)=='string', unquote($raw-query), inspect($raw-query));
-        @media screen and #{$query} {
+        @media screen and (min-width:#{$query}) {
             @content;
         }
     }
@@ -140,45 +140,6 @@
 
 
 /**  Custome mixin**/
-
-@mixin rotateLoopP($className, $degStart, $n) {
-    $deg: 18*$n + $degStart;
-    .#{$className}--#{$n} {
-        @include prefixer(transform, rotate(#{$deg}))
-    }
-}
-
-@mixin rotateLoopN($className, $degStart, $n) {
-    $deg: $degStart - 15*$n;
-    .#{$className}--#{$n} {
-        @include prefixer(transform, rotate(#{$deg}));
-    }
-}
-
-@mixin customDelayTextLoader($className, $delayS, $n) {
-    $delay: $n*100 + $delayS;
-    .#{$className}--#{$n}>p {
-        @include prefixer(animation, popup 150ms ease both);
-        @include prefixer(animation-delay, $delay);
-    }
-}
-
-@mixin shadowSkeuemorph($theme, $action, $size: $sizeShadow) {
-    @if ($theme=="dark" and $action=="push") {
-        box-shadow: inset 5px 5px 5px invert(rgba(255, 255, 255, 0.8)), inset -5px -5px 10px invert(rgba(106, 106, 106, 0.8));
-    }
-    @else if ($theme=="dark" and $action=="nopush") {
-        box-shadow: #{$size} #{$size} #{$blurShadow} invert(rgba(255, 255, 255, 0.8), 79%),
-        -#{$size} -#{$size} #{$blurShadow} invert(rgba(0, 0, 0, 0.25), 79%);
-    }
-    @else if ($theme=="light" and $action=="nopush") {
-        box-shadow: #{$size} #{$size} #{$blurShadow} rgba(0, 0, 0, 0.25),
-        -#{$size} -#{$size} #{$blurShadow} rgba(255, 255, 255, 0.8);
-    }
-    @else if ($theme=="light" and $action=="push") {
-        box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(106, 106, 106, 0.8);
-    }
-}
 
 @mixin borderRadiusLinearGradient($color-border) {
     border: double 2px transparent;
