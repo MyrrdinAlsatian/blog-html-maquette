@@ -1,0 +1,25 @@
+.intro{
+    &__text{
+        font-size:$body-font-size-medium;
+        font-family: $body-font-family;
+    }
+
+    &__title{
+        font-size:$body-font-size-large;
+        font-weight: 700;
+        font-size: $heading-font-size-small;
+        &-label{
+            color: $blue-400;
+            font-weight: 700;
+            font-family: $body-font-family;
+            font-size:$body-font-size-medium;
+
+        }
+    }
+    &__btns-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+}

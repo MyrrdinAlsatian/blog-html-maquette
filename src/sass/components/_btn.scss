@@ -1,2 +1,16 @@
             /* tout les élements réutilisable*/
-           
+           .btn{
+               font-family: $body-font-family;
+               font-size: $body-font-size-small;
+               border-bottom: $dark-400 solid 1px;
+               height:1.5em;
+               display: inline-block;
+
+               &,
+               &:visited,
+               &:active{
+                   text-decoration: none;
+                   color: $dark-400;
+               }
+
+           }
