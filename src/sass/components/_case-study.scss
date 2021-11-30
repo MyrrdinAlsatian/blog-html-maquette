@@ -9,8 +9,8 @@
         &:nth-child(even){
             header{
                 flex-flow: row-reverse nowrap;
-                justify-content:end;
-                text-align:end;
+                justify-content:flex-start;
+                text-align:right;
             }
         }
         &-article{
@@ -32,7 +32,7 @@
             margin: -0.5em 0;
             display: flex;
             flex-flow: column;
-            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: $dark-400;
 
             max-width: 60%;

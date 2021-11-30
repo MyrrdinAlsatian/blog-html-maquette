@@ -1,0 +1,25 @@
+.blog{
+    
+    &__list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__item{
+        &-article{
+            position: relative;
+
+            time{
+                position: absolute;
+                top: 0;
+                left: 80%;
+                transform: rotate(-90deg);
+                mix-blend-mode: exclusion;
+            }
+        }
+    &-image{
+        width: 100%;
+    }
+
+    }
+}
