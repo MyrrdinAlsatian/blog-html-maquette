@@ -5,6 +5,14 @@
     }
     &__item{
 
+        margin-bottom: 5rem;
+        &:nth-child(even){
+            header{
+                flex-flow: row-reverse nowrap;
+                justify-content:end;
+                text-align:end;
+            }
+        }
         &-article{
             display: flex;
             flex-flow: column-reverse wrap;
@@ -33,8 +41,9 @@
                 height: 1.1em;
                 margin: 0;
                 padding: 0;
-                z-index: $zindex-tooltip;
-                max-width: 80%;
+                z-index: calc($zindex-navigation - 1);
+                max-width: 100%;
+                width: fit-content;
             }
             
             &  svg text{
