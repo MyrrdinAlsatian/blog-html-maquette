@@ -1,21 +1,21 @@
 /***/
 
 :root {
-    --text-color: #{$dark-400};
-    --title-section: #{$gray-400};
-    --line-color: #{$lineColor};
-    --text-font: 'Raleway';
-    --gap-body: 10vw;
+  --text-color: #{$dark-400};
+  --title-section: #{$gray-400};
+  --line-color: #{$lineColor};
+  --text-font: "Raleway";
+  --gap-body: 10vw;
 }
 
-
-    h1{
-        color: var(--title-section);
-    }
+h1 {
+  color: var(--title-section);
+}
 
 html {
-    font-size: 62.5%;
-    /*
+  font-size: 62.5%;
+  line-height: $body-line-height;
+  /*
     TODO:
     font-size par defaut est de 16px (dans la pluspart des navigateurs) donc si taille par defaut(16px) * 62.5% = 10px, 
     else si taille à été modifié permet de conserver les préférences de l'utilisateurs et changer l'apparence en conséquence
@@ -23,18 +23,36 @@ html {
 }
 
 body {
-    background: $off-white;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
+  background: $off-white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-    width: 100vw;
-    overflow: hidden;
-    padding: 0 var(--gap-body);
-    transition: color 0.5s ease-in, background 0.5s linear;
-    background: $off-white;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0 var(--gap-body);
+  transition: color 0.5s ease-in, background 0.5s linear;
+  background: $off-white;
+  z-index: -2;
 }
+
+footer {
+  z-index: -2;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0 var(--gap-body);
+  transition: color 0.5s ease-in, background 0.5s linear;
+  background: $off-white;
+}
+/* 
+a{
+    &:visited,
+    &:active{
+        text-decoration: none;
+    }
+}
+ */

@@ -12,5 +12,26 @@
                    text-decoration: none;
                    color: $dark-400;
                }
-
+               &-primary{
+                font-size: 1.6rem;
+                color: $dark-400;
+                display: inline-block;
+                text-decoration: none;
+                border-bottom: 1px solid $dark-400;
+                padding: 3px;
+                -webkit-transition: all .2s;
+                transition: all .2s;
+                &:hover{
+                    background-color: $dark-400;
+                    color: $off-white;
+                    -webkit-box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
+                    box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
+                    -webkit-transform: translateY(-2px);
+                    transform: translateY(-2px);
+                }
+                &::after{
+                    content: "→";
+                    margin-left: 5px;
+                }
+               }
            }
