@@ -36,4 +36,5 @@ main {
     overflow: hidden;
     padding: 0 var(--gap-body);
     transition: color 0.5s ease-in, background 0.5s linear;
+    background: $off-white;
 }

@@ -14,11 +14,14 @@
                 top: 0;
                 left: 80%;
                 transform: rotate(-90deg);
-                mix-blend-mode: exclusion;
+                color: $off-white;
+                mix-blend-mode: difference;
+                font-weight: 700;
             }
         }
-    &-image{
+    &-img{
         width: 100%;
+        background:$dark-400;
     }
 
     }
