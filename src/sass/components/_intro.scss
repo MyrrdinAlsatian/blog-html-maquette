@@ -1,29 +1,29 @@
 .intro {
-  &__text {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: $body-font-size-medium;
-    font-family: $body-font-family;
-  }
-
-  &__title {
-    font-weight: $font-weight-bold;
-    font-size: $heading-font-size-small;
-    font-family: $heading-font-family;
-    margin: 1rem 0;
-    &-label {
-      color: $blue-400;
-      font-weight: $font-weight-bold;
-      font-family: $body-font-family;
-      font-size: $body-font-size-medium;
+    &__text {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: $body-font-size-medium;
+        font-family: $body-font-family;
     }
-  }
-  &__btns-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: auto;
-  }
+
+    &__title {
+        font-weight: $font-weight-bold;
+        font-size: $heading-font-size-small;
+        font-family: $heading-font-family;
+        margin: 1rem 0;
+        &-label {
+            color: $blue-400;
+            font-weight: $font-weight-bold;
+            font-family: $body-font-family;
+            font-size: $body-font-size-medium;
+        }
+    }
+    &__btns-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
 }

@@ -1,15 +1,25 @@
-.blogging{
-        &__content{
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-rows: repeat(6, 1fr);
-                grid-column-gap: 0px;
-                grid-row-gap: 0px;
-                
-                
-            }
-            &__searchbar { grid-area: 1 / 1 / 2 / 6; background: pink; }
-            &__text { grid-area: 3 / 1 / 7 / 5; background: blue; }
-            &__metadata { grid-area: 2 / 5 / 7 / 6; background: $dark-400; }
-            &__title { grid-area: 2 / 1 / 3 / 5; background: yellow;}
+.blogging {
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
+    &__searchbar {
+        grid-area: 1 / 1 / 2 / 6;
+        background: pink;
+    }
+    &__text {
+        grid-area: 3 / 1 / 7 / 5;
+        background: blue;
+    }
+    &__metadata {
+        grid-area: 2 / 5 / 7 / 6;
+        background: $dark-400;
+    }
+    &__title {
+        grid-area: 2 / 1 / 3 / 5;
+        background: yellow;
+    }
+}

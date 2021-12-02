@@ -1,15 +1,9 @@
 .title {
-  &-section {
-    @include fluid-type(
-      font-size,
-      $small,
-      $extra-large,
-      $heading-font-size-medium-large,
-      9.6rem
-    );
-    font-family: $heading-font-family;
-    color: $gray-400;
-    margin-bottom: 2rem;
-    align-self: flex-start;
-  }
+    &-section {
+        @include fluid-type(font-size, $small, $extra-large, $heading-font-size-medium-large, 9.6rem);
+        font-family: $heading-font-family;
+        color: $gray-400;
+        margin-bottom: 2rem;
+        align-self: flex-start;
+    }
 }

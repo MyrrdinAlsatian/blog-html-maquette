@@ -35,19 +35,23 @@ body {
 @font-face {
     font-family: 'FontAwesome';
     src: url('./Assets/fonts/FontAwesome/fontawesome-webfont.eot');
-    src: url('./Assets/fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../Assets/fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../Assets/fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../Assets/fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../Assets/fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    src: url('./Assets/fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+        url('../Assets/fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+        url('../Assets/fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+        url('../Assets/fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+        url('../Assets/fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: CabinRegular;
-    src: url('./Assets/fonts/Cabin/Cabin-Regular.ttf')
+    src: url('./Assets/fonts/Cabin/Cabin-Regular.ttf');
 }
 
 @font-face {
     font-family: Lobster;
-    src: url('./Assets/fonts/Lobster/Lobster-Regular.ttf')
+    src: url('./Assets/fonts/Lobster/Lobster-Regular.ttf');
 }
 
 /** FontAwesome**/
@@ -58,15 +62,13 @@ body {
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .fa-spinner:before {
-    content: "\f110"
+    content: '\f110';
 }
 
 .fa-pulse {
-    @include prefixer(animation,
-    fa-spin .5s infinite steps(8));
+    @include prefixer(animation, fa-spin 0.5s infinite steps(8));
 }
-

@@ -1,11 +1,10 @@
 @mixin clearfix {
     &::after {
-        content: "";
+        content: '';
         display: table;
         clear: both;
     }
 }
-
 
 /* pour pseudo class ::before et ::after*/
 
@@ -14,7 +13,6 @@
     display: block;
     position: absolute;
 }
-
 
 /* centrer un element*/
 
@@ -36,15 +34,15 @@
     width: $w;
 }
 
-
 /* Font*/
 
-@mixin font-face($style-name, $file, $family, $category:"") {
-    $filepath: "fonts/" + $family + "/" + $file;
+@mixin font-face($style-name, $file, $family, $category: '') {
+    $filepath: 'fonts/' + $family + '/' + $file;
     @font-face {
-        font-family: "#{$style-name}";
-        src: url($filepath + ".eot");
-        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf") format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+        font-family: '#{$style-name}';
+        src: url($filepath + '.eot');
+        src: url($filepath + '.eot?#iefix') format('embedded-opentype'), url($filepath + '.woff') format('woff'),
+            url($filepath + '.ttf') format('truetype'), url($filepath + '.svg#' + $style-name + '') format('svg');
     }
     // %#{$style-name} {
     //     font: {
@@ -59,7 +57,6 @@
     // }
 }
 
-
 /* responsive fluid pour les typos*/
 
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
@@ -69,7 +66,14 @@
         }
         @media screen and (min-width: $min-vw) {
             @each $property in $properties {
-                #{$property}: calc((#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) ) / #{strip-unit($max-vw - $min-vw)}));
+                #{$property}: calc(
+                    (
+                        #{$min-value} +
+                            #{strip-unit($max-value - $min-value)} *
+                            ((100vw - #{$min-vw})) /
+                            #{strip-unit($max-vw - $min-vw)}
+                    )
+                );
             }
         }
         @media screen and (min-width: $max-vw) {
@@ -79,7 +83,6 @@
         }
     }
 }
-
 
 /* Ajout des préfix pour compatibilité*/
 
@@ -109,7 +112,6 @@
     }
 }
 
-
 /* Média query*/
 
 /// Responsive breakpoint manager
@@ -119,16 +121,14 @@
 @mixin respond-to($breakpoint) {
     $raw-query: map-get($breakpoints, $breakpoint);
     @if $raw-query {
-        $query: if(type-of($raw-query)=='string', unquote($raw-query), inspect($raw-query));
+        $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
         @media screen and (min-width:#{$query}) {
             @content;
         }
-    }
-    @else {
+    } @else {
         @error 'No value found for `#{$breakpoint}`. '+'Please make sure it is defined in `$breakpoints` map.';
     }
 }
-
 
 /* Ajout de (...)*/
 
@@ -138,13 +138,11 @@
     white-space: nowrap;
 }
 
-
 /**  Custome mixin**/
 
 @mixin borderRadiusLinearGradient($color-border) {
     border: double 2px transparent;
-    background-image: linear-gradient(to right, var(--bg-principal), var(--bg-principal)),
-    #{$color-border};
+    background-image: linear-gradient(to right, var(--bg-principal), var(--bg-principal)), #{$color-border};
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
