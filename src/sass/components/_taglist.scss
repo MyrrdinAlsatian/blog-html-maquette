@@ -1,0 +1,28 @@
+.taglist {
+    & {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a {
+        &,
+        &:visited,
+        &:focus {
+            color: $blue-400;
+            text-decoration: none;
+        }
+    }
+    & li {
+        font-size: $body-font-size-small;
+        font-family: $heading-font-family;
+        line-height: 1.643em;
+        &:not(:last-of-type) {
+            margin-right: 1.2em;
+        }
+        &:first-of-type {
+            font-weight: $font-weight-bold;
+        }
+    }
+}

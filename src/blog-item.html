@@ -12,99 +12,274 @@
 
         <title>Jean-Baptiste Stephan Creative developer</title>
     </head>
-
-    <body class="blogging__container">
-        <header class="">
-            t
-            <div class="navigation navigation--mobile">
-                <input class="navigation__checkbox" type="checkbox" name="nav-toggle" id="nav-toggle" />
-                <label class="navigation__button" for="nav-toggle">
-                    <span class="navigation__icon"> &nbsp; </span>
-                </label>
-                <div class="navigation__background">&nbsp;</div>
-                <nav class="navigation__nav" role="navigation" aria-label="mobile">
-                    <ul class="navigation__list">
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">About me</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Case study</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Blog</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="navigation navigation--desktop">
-                <nav class="navigation__nav" role="navigation" aria-label="main">
-                    <ul class="navigation__list">
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">About me</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Case study</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Blog</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main class="blogging__content">
-            <nav class="blogging__searchbar">t</nav>
-            <h1 class="blogging__title">blog</h1>
-            <aside class="blogging__text">t</aside>
-            <div class="blogging__metadata">t</div>
-        </main>
-        <footer class="footer">
-            <h4 class="footer__header">Construisont ensemble !</h4>
-            <figure class="footer__citation">
-                <blockquote cite="">
-                    <p>“Great things in business are never done by one person. They’re done by a team of people.”</p>
-                </blockquote>
-                <figcaption>
-                    Steve Jobs
-                    <cite> Steve Jobs: His Own Words and Wisdom</cite>
-                </figcaption>
-            </figure>
-            <div class="footer__contact">
-                <h4>Jean-Baptiste Stephan</h4>
-                <div class="footer__contact-position" id="mailto">
-                    <p>Fullstack developer <span>stephan.jeanba(at).gmail.com</span></p>
+    <body>
+        <div class="blogging__container">
+            <header class="">
+                <div class="navigation navigation--mobile">
+                    <input class="navigation__checkbox" type="checkbox" name="nav-toggle" id="nav-toggle" />
+                    <label class="navigation__button" for="nav-toggle">
+                        <span class="navigation__icon"> &nbsp; </span>
+                    </label>
+                    <div class="navigation__background">&nbsp;</div>
+                    <nav class="navigation__nav" role="navigation" aria-label="mobile">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="./index.html">About me</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#">Case study</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#">Blog</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <a name="intro__btn-footer" id="intro__btn-footer" href="#" role="button" class="btn btn-primary"
-                    >Resume</a
-                >
-            </div>
-            <div class="footer__menu">
-                <h4>À découvrir</h4>
-                <nav>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case study</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__follow">
-                <h4>Suivez moi !</h4>
-                <nav>
-                    <ul>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Twitch</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <p class="footer__cgu">Developed & code with <span>❤️</span> by Me</p>
-        </footer>
+                <!-- 
+                    <div class="navigation navigation--desktop">
+                        <nav class="navigation__nav" role="navigation" aria-label="main">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">About me</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Case study</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Blog</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> -->
+            </header>
+            <main class="blogging__content">
+                <div class="blogging__searchbar">
+                    <div class="row">
+                        <div class="input-wrapper">
+                            <label for="searchbar">
+                                <svg
+                                    width="1em"
+                                    height="1em"
+                                    viewBox="0 0 7 7"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g clip-path="url(#clip0_1043_343)">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M4.24514 4.30606C4.27804 4.27001 4.31711 4.2414 4.36011 4.22188C4.40312 4.20237 4.44921 4.19232 4.49576 4.19232C4.54232 4.19232 4.58841 4.20237 4.63141 4.22188C4.67442 4.2414 4.71349 4.27001 4.74639 4.30606L6.1102 5.79917C6.17667 5.87189 6.21403 5.97054 6.21406 6.07342C6.2141 6.1763 6.1768 6.27498 6.11038 6.34775C6.04395 6.42052 5.95385 6.46142 5.85988 6.46146C5.76591 6.46149 5.67578 6.42066 5.60931 6.34794L4.24549 4.85483C4.21256 4.81881 4.18643 4.77604 4.1686 4.72896C4.15078 4.68188 4.1416 4.63141 4.1416 4.58045C4.1416 4.52948 4.15078 4.47902 4.1686 4.43194C4.18643 4.38485 4.21256 4.34208 4.24549 4.30606H4.24514Z"
+                                            fill="#2A293C"
+                                        />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M2.84844 4.91025C3.1043 4.91025 3.35765 4.85508 3.59403 4.74789C3.8304 4.64069 4.04518 4.48358 4.2261 4.28551C4.40702 4.08744 4.55053 3.8523 4.64844 3.59351C4.74635 3.33472 4.79675 3.05735 4.79675 2.77724C4.79675 2.49713 4.74635 2.21976 4.64844 1.96097C4.55053 1.70218 4.40702 1.46704 4.2261 1.26897C4.04518 1.07091 3.8304 0.913789 3.59403 0.806595C3.35765 0.699401 3.1043 0.644229 2.84844 0.644229C2.33172 0.644229 1.83616 0.868957 1.47078 1.26897C1.1054 1.66899 0.900136 2.21153 0.900136 2.77724C0.900136 3.34295 1.1054 3.88549 1.47078 4.28551C1.83616 4.68553 2.33172 4.91025 2.84844 4.91025V4.91025ZM5.15098 2.77724C5.15098 3.44581 4.90839 4.08699 4.47658 4.55974C4.04477 5.03249 3.45911 5.29807 2.84844 5.29807C2.23777 5.29807 1.65211 5.03249 1.2203 4.55974C0.788487 4.08699 0.545898 3.44581 0.545898 2.77724C0.545898 2.10868 0.788487 1.46749 1.2203 0.994744C1.65211 0.521996 2.23777 0.256409 2.84844 0.256409C3.45911 0.256409 4.04477 0.521996 4.47658 0.994744C4.90839 1.46749 5.15098 2.10868 5.15098 2.77724V2.77724Z"
+                                            fill="#2A293C"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1043_343">
+                                            <rect
+                                                width="5.6678"
+                                                height="6.20513"
+                                                fill="white"
+                                                transform="translate(0.545898 0.256409)"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </label>
+                            <input
+                                type="search"
+                                name="searchbar"
+                                id="searchbar"
+                                placeholder="Rechercher sur le site..."
+                                aria-label="Rechercher sur le site"
+                            />
+                            <span class="input-highlight"> &nbsp; </span>
+                        </div>
+                        <ul class="top__link">
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                            ><svg
+                                                width="1em"
+                                                height="1.2em"
+                                                viewBox="0 0 5 6"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g clip-path="url(#clip0_1043_339)">
+                                                    <path
+                                                        d="M3.24314 2.8974C3.24314 2.68978 3.17605 2.51252 3.04187 2.36562C2.90769 2.21872 2.74578 2.14526 2.55613 2.14526C2.36649 2.14526 2.20458 2.21872 2.0704 2.36562C1.93622 2.51252 1.86913 2.68978 1.86913 2.8974C1.86913 3.10502 1.93622 3.28228 2.0704 3.42919C2.20458 3.57609 2.36649 3.64954 2.55613 3.64954C2.74578 3.64954 2.90769 3.57609 3.04187 3.42919C3.17605 3.28228 3.24314 3.10502 3.24314 2.8974ZM3.61348 2.8974C3.61348 3.21863 3.51061 3.49186 3.30486 3.71711C3.09912 3.94236 2.84954 4.05499 2.55613 4.05499C2.26273 4.05499 2.01315 3.94236 1.80741 3.71711C1.60166 3.49186 1.49879 3.21863 1.49879 2.8974C1.49879 2.57618 1.60166 2.30294 1.80741 2.07769C2.01315 1.85244 2.26273 1.73982 2.55613 1.73982C2.84954 1.73982 3.09912 1.85244 3.30486 2.07769C3.51061 2.30294 3.61348 2.57618 3.61348 2.8974ZM3.90331 1.69281C3.90331 1.76724 3.87916 1.8309 3.83085 1.88378C3.78255 1.93666 3.7244 1.96311 3.65642 1.96311C3.58843 1.96311 3.53029 1.93666 3.48198 1.88378C3.43368 1.8309 3.40952 1.76724 3.40952 1.69281C3.40952 1.61838 3.43368 1.55472 3.48198 1.50184C3.53029 1.44895 3.58843 1.42251 3.65642 1.42251C3.7244 1.42251 3.78255 1.44895 3.83085 1.50184C3.87916 1.55472 3.90331 1.61838 3.90331 1.69281ZM2.55613 1.04644C2.54361 1.04644 2.47518 1.04595 2.35084 1.04497C2.2265 1.04399 2.13212 1.04399 2.06772 1.04497C2.00331 1.04595 1.91699 1.04889 1.80875 1.05379C1.70051 1.05868 1.60837 1.06848 1.53233 1.08317C1.4563 1.09786 1.39234 1.11597 1.34046 1.13752C1.251 1.17669 1.17228 1.23349 1.1043 1.30792C1.03631 1.38236 0.98443 1.46854 0.948648 1.56647C0.928969 1.62327 0.91242 1.6933 0.899001 1.77654C0.885583 1.85979 0.876638 1.96066 0.872165 2.07916C0.867693 2.19766 0.865009 2.29217 0.864114 2.36268C0.86322 2.43319 0.86322 2.53651 0.864114 2.67264C0.865009 2.80877 0.865456 2.88369 0.865456 2.8974C0.865456 2.91111 0.865009 2.98603 0.864114 3.12216C0.86322 3.25829 0.86322 3.36161 0.864114 3.43212C0.865009 3.50264 0.867693 3.59714 0.872165 3.71564C0.876638 3.83414 0.885583 3.93502 0.899001 4.01826C0.91242 4.10151 0.928969 4.17153 0.948648 4.22833C0.98443 4.32627 1.03631 4.41245 1.1043 4.48688C1.17228 4.56131 1.251 4.61811 1.34046 4.65728C1.39234 4.67883 1.4563 4.69695 1.53233 4.71164C1.60837 4.72633 1.70051 4.73612 1.80875 4.74102C1.91699 4.74591 2.00331 4.74885 2.06772 4.74983C2.13212 4.75081 2.2265 4.75081 2.35084 4.74983C2.47518 4.74885 2.54361 4.74836 2.55613 4.74836C2.56866 4.74836 2.63709 4.74885 2.76143 4.74983C2.88577 4.75081 2.98015 4.75081 3.04455 4.74983C3.10896 4.74885 3.19528 4.74591 3.30352 4.74102C3.41176 4.73612 3.5039 4.72633 3.57993 4.71164C3.65597 4.69695 3.71993 4.67883 3.77181 4.65728C3.86127 4.61811 3.93999 4.56131 4.00797 4.48688C4.07596 4.41245 4.12784 4.32627 4.16362 4.22833C4.1833 4.17153 4.19985 4.10151 4.21327 4.01826C4.22669 3.93502 4.23563 3.83414 4.2401 3.71564C4.24458 3.59714 4.24726 3.50264 4.24815 3.43212C4.24905 3.36161 4.24905 3.25829 4.24815 3.12216C4.24726 2.98603 4.24681 2.91111 4.24681 2.8974C4.24681 2.88369 4.24726 2.80877 4.24815 2.67264C4.24905 2.53651 4.24905 2.43319 4.24815 2.36268C4.24726 2.29217 4.24458 2.19766 4.2401 2.07916C4.23563 1.96066 4.22669 1.85979 4.21327 1.77654C4.19985 1.6933 4.1833 1.62327 4.16362 1.56647C4.12784 1.46854 4.07596 1.38236 4.00797 1.30792C3.93999 1.23349 3.86127 1.17669 3.77181 1.13752C3.71993 1.11597 3.65597 1.09786 3.57993 1.08317C3.5039 1.06848 3.41176 1.05868 3.30352 1.05379C3.19528 1.04889 3.10896 1.04595 3.04455 1.04497C2.98015 1.04399 2.88577 1.04399 2.76143 1.04497C2.63709 1.04595 2.56866 1.04644 2.55613 1.04644ZM4.61715 2.8974C4.61715 3.34594 4.61268 3.65639 4.60373 3.82876C4.58584 4.23617 4.47492 4.55151 4.27097 4.77481C4.06701 4.9981 3.77897 5.11953 3.40684 5.13912C3.2494 5.14892 2.96583 5.15381 2.55613 5.15381C2.14644 5.15381 1.86287 5.14892 1.70543 5.13912C1.3333 5.11953 1.04526 4.9981 0.841304 4.77481C0.637349 4.55151 0.526426 4.23617 0.508535 3.82876C0.49959 3.65639 0.495117 3.34594 0.495117 2.8974C0.495117 2.44886 0.49959 2.13841 0.508535 1.96604C0.526426 1.55864 0.637349 1.24329 0.841304 1.02C1.04526 0.796707 1.3333 0.675268 1.70543 0.655681C1.86287 0.645888 2.14644 0.640991 2.55613 0.640991C2.96583 0.640991 3.2494 0.645888 3.40684 0.655681C3.77897 0.675268 4.06701 0.796707 4.27097 1.02C4.47492 1.24329 4.58584 1.55864 4.60373 1.96604C4.61268 2.13841 4.61715 2.44886 4.61715 2.8974Z"
+                                                        fill="#11538D"
+                                                    />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1043_339">
+                                                        <rect
+                                                            width="4.12204"
+                                                            height="4.51282"
+                                                            fill="white"
+                                                            transform="translate(0.495117 0.640991)"
+                                                        />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg
+                                                width="1em"
+                                                height="1.2em"
+                                                viewBox="0 0 5 6"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g clip-path="url(#clip0_1043_339)">
+                                                    <path
+                                                        d="M3.24314 2.8974C3.24314 2.68978 3.17605 2.51252 3.04187 2.36562C2.90769 2.21872 2.74578 2.14526 2.55613 2.14526C2.36649 2.14526 2.20458 2.21872 2.0704 2.36562C1.93622 2.51252 1.86913 2.68978 1.86913 2.8974C1.86913 3.10502 1.93622 3.28228 2.0704 3.42919C2.20458 3.57609 2.36649 3.64954 2.55613 3.64954C2.74578 3.64954 2.90769 3.57609 3.04187 3.42919C3.17605 3.28228 3.24314 3.10502 3.24314 2.8974ZM3.61348 2.8974C3.61348 3.21863 3.51061 3.49186 3.30486 3.71711C3.09912 3.94236 2.84954 4.05499 2.55613 4.05499C2.26273 4.05499 2.01315 3.94236 1.80741 3.71711C1.60166 3.49186 1.49879 3.21863 1.49879 2.8974C1.49879 2.57618 1.60166 2.30294 1.80741 2.07769C2.01315 1.85244 2.26273 1.73982 2.55613 1.73982C2.84954 1.73982 3.09912 1.85244 3.30486 2.07769C3.51061 2.30294 3.61348 2.57618 3.61348 2.8974ZM3.90331 1.69281C3.90331 1.76724 3.87916 1.8309 3.83085 1.88378C3.78255 1.93666 3.7244 1.96311 3.65642 1.96311C3.58843 1.96311 3.53029 1.93666 3.48198 1.88378C3.43368 1.8309 3.40952 1.76724 3.40952 1.69281C3.40952 1.61838 3.43368 1.55472 3.48198 1.50184C3.53029 1.44895 3.58843 1.42251 3.65642 1.42251C3.7244 1.42251 3.78255 1.44895 3.83085 1.50184C3.87916 1.55472 3.90331 1.61838 3.90331 1.69281ZM2.55613 1.04644C2.54361 1.04644 2.47518 1.04595 2.35084 1.04497C2.2265 1.04399 2.13212 1.04399 2.06772 1.04497C2.00331 1.04595 1.91699 1.04889 1.80875 1.05379C1.70051 1.05868 1.60837 1.06848 1.53233 1.08317C1.4563 1.09786 1.39234 1.11597 1.34046 1.13752C1.251 1.17669 1.17228 1.23349 1.1043 1.30792C1.03631 1.38236 0.98443 1.46854 0.948648 1.56647C0.928969 1.62327 0.91242 1.6933 0.899001 1.77654C0.885583 1.85979 0.876638 1.96066 0.872165 2.07916C0.867693 2.19766 0.865009 2.29217 0.864114 2.36268C0.86322 2.43319 0.86322 2.53651 0.864114 2.67264C0.865009 2.80877 0.865456 2.88369 0.865456 2.8974C0.865456 2.91111 0.865009 2.98603 0.864114 3.12216C0.86322 3.25829 0.86322 3.36161 0.864114 3.43212C0.865009 3.50264 0.867693 3.59714 0.872165 3.71564C0.876638 3.83414 0.885583 3.93502 0.899001 4.01826C0.91242 4.10151 0.928969 4.17153 0.948648 4.22833C0.98443 4.32627 1.03631 4.41245 1.1043 4.48688C1.17228 4.56131 1.251 4.61811 1.34046 4.65728C1.39234 4.67883 1.4563 4.69695 1.53233 4.71164C1.60837 4.72633 1.70051 4.73612 1.80875 4.74102C1.91699 4.74591 2.00331 4.74885 2.06772 4.74983C2.13212 4.75081 2.2265 4.75081 2.35084 4.74983C2.47518 4.74885 2.54361 4.74836 2.55613 4.74836C2.56866 4.74836 2.63709 4.74885 2.76143 4.74983C2.88577 4.75081 2.98015 4.75081 3.04455 4.74983C3.10896 4.74885 3.19528 4.74591 3.30352 4.74102C3.41176 4.73612 3.5039 4.72633 3.57993 4.71164C3.65597 4.69695 3.71993 4.67883 3.77181 4.65728C3.86127 4.61811 3.93999 4.56131 4.00797 4.48688C4.07596 4.41245 4.12784 4.32627 4.16362 4.22833C4.1833 4.17153 4.19985 4.10151 4.21327 4.01826C4.22669 3.93502 4.23563 3.83414 4.2401 3.71564C4.24458 3.59714 4.24726 3.50264 4.24815 3.43212C4.24905 3.36161 4.24905 3.25829 4.24815 3.12216C4.24726 2.98603 4.24681 2.91111 4.24681 2.8974C4.24681 2.88369 4.24726 2.80877 4.24815 2.67264C4.24905 2.53651 4.24905 2.43319 4.24815 2.36268C4.24726 2.29217 4.24458 2.19766 4.2401 2.07916C4.23563 1.96066 4.22669 1.85979 4.21327 1.77654C4.19985 1.6933 4.1833 1.62327 4.16362 1.56647C4.12784 1.46854 4.07596 1.38236 4.00797 1.30792C3.93999 1.23349 3.86127 1.17669 3.77181 1.13752C3.71993 1.11597 3.65597 1.09786 3.57993 1.08317C3.5039 1.06848 3.41176 1.05868 3.30352 1.05379C3.19528 1.04889 3.10896 1.04595 3.04455 1.04497C2.98015 1.04399 2.88577 1.04399 2.76143 1.04497C2.63709 1.04595 2.56866 1.04644 2.55613 1.04644ZM4.61715 2.8974C4.61715 3.34594 4.61268 3.65639 4.60373 3.82876C4.58584 4.23617 4.47492 4.55151 4.27097 4.77481C4.06701 4.9981 3.77897 5.11953 3.40684 5.13912C3.2494 5.14892 2.96583 5.15381 2.55613 5.15381C2.14644 5.15381 1.86287 5.14892 1.70543 5.13912C1.3333 5.11953 1.04526 4.9981 0.841304 4.77481C0.637349 4.55151 0.526426 4.23617 0.508535 3.82876C0.49959 3.65639 0.495117 3.34594 0.495117 2.8974C0.495117 2.44886 0.49959 2.13841 0.508535 1.96604C0.526426 1.55864 0.637349 1.24329 0.841304 1.02C1.04526 0.796707 1.3333 0.675268 1.70543 0.655681C1.86287 0.645888 2.14644 0.640991 2.55613 0.640991C2.96583 0.640991 3.2494 0.645888 3.40684 0.655681C3.77897 0.675268 4.06701 0.796707 4.27097 1.02C4.47492 1.24329 4.58584 1.55864 4.60373 1.96604C4.61268 2.13841 4.61715 2.44886 4.61715 2.8974Z"
+                                                        fill="#11538D"
+                                                    />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1043_339">
+                                                        <rect
+                                                            width="4.12204"
+                                                            height="4.51282"
+                                                            fill="white"
+                                                            transform="translate(0.495117 0.640991)"
+                                                        />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="language">
+                                <a href="#">
+                                    <svg
+                                        width="1em"
+                                        height="1em"
+                                        viewBox="0 0 5 5"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g clip-path="url(#clip0_1043_326)">
+                                            <path
+                                                d="M1.00098 2.61539C1.00098 3.5391 1.54199 4.3218 2.28911 4.6109V0.619873C1.54199 0.908976 1.00098 1.69167 1.00098 2.61539Z"
+                                                fill="#428BC1"
+                                            />
+                                            <path
+                                                d="M4.86528 2.61539C4.86528 1.69167 4.33071 0.908976 3.57715 0.619873V4.6109C4.33071 4.3218 4.86528 3.5391 4.86528 2.61539"
+                                                fill="#ED4C5C"
+                                            />
+                                            <path
+                                                d="M2.28906 4.6109C2.48872 4.68846 2.70771 4.73077 2.93313 4.73077C3.15855 4.73077 3.37754 4.68846 3.5772 4.6109V0.619872C3.37754 0.542308 3.165 0.5 2.93313 0.5C2.70127 0.5 2.48872 0.542308 2.28906 0.619872V4.6109"
+                                                fill="white"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1043_326">
+                                                <rect
+                                                    width="4.12203"
+                                                    height="4.51282"
+                                                    fill="white"
+                                                    transform="translate(0.878906 0.358948)"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <ul class="taglist">
+                            <li><a href="#" target="_blank" rel="noopener noreferrer">#Recipe</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer">#Food</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer">#Food</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h1 class="blogging__title title-blog">Blog</h1>
+                <div class="blogging__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem euismod id interdum vivamus viverra commodo quis ut. Egestas amet, orci sem sem neque a, quisque sagittis. Dictum a etiam at semper tempor convallis suspendisse aliquet metus. Scelerisque porttitor placerat egestas mollis mauris at in sollicitudin eleifend.
+                </div>
+                <aside class="blogging__metadata">
+                    <figure>
+                        <img src="./assets/imgs/miam1.png" alt="" />
+                        <figcaption>Paste fraiche au pesto</figcaption>
+                    </figure>
+
+                    <details class="blogging__metadata-list">
+                        <summary>Sommaire</summary>
+                        <ol class="blogging__metadata-list--primary">
+                            <li><span>Etape 1</span></li>
+                            <li><span>Etape 2</span>
+                                <ol class="blogging__metadata-list--secondary">
+                                    <li>2.1</li>
+                                </ol>
+                            </li>
+                            
+                        </ol>
+                    </details>
+                </aside>
+            </main>
+            <footer class="footer">
+                <h4 class="footer__header">Construisont ensemble !</h4>
+                <figure class="footer__citation">
+                    <blockquote cite="">
+                        <p>
+                            “Great things in business are never done by one person. They’re done by a team of people.”
+                        </p>
+                    </blockquote>
+                    <figcaption>
+                        Steve Jobs
+                        <cite> Steve Jobs: His Own Words and Wisdom</cite>
+                    </figcaption>
+                </figure>
+                <div class="footer__contact">
+                    <h4>Jean-Baptiste Stephan</h4>
+                    <div class="footer__contact-position" id="mailto">
+                        <p>Fullstack developer <span>stephan.jeanba(at).gmail.com</span></p>
+                    </div>
+                    <a name="intro__btn-footer" id="intro__btn-footer" href="#" role="button" class="btn btn-primary"
+                        >Resume</a
+                    >
+                </div>
+                <div class="footer__menu">
+                    <h4>À découvrir</h4>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Case study</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__follow">
+                    <h4>Suivez moi !</h4>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                            <li><a href="#">Twitch</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="footer__cgu">Developed & code with <span>❤️</span> by Me</p>
+            </footer>
+        </div>
     </body>
 </html>

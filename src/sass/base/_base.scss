@@ -24,6 +24,9 @@ html {
 
 body {
     background: $off-white;
+}
+
+.body__container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
