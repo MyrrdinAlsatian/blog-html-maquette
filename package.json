@@ -8,7 +8,8 @@
         "dev": "gulp stream",
         "save": "gulp archiver",
         "sass": "gulp sassToCss",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
     },
     "author": "Myrrdin",
     "license": "ISC",
@@ -30,6 +31,7 @@
         "lint-staged": "^12.1.2",
         "modernizr": "^3.8.0",
         "node-cron": "^2.0.3",
+        "prettier": "^2.5.0",
         "sass": "^1.43.5"
     },
     "engines": {
@@ -72,14 +74,14 @@
             ]
         ]
     },
-    
-        "lint-staged": {
-          "*.(js|html|css|scss)": [
-            "prettier --write"
-          ],
-          "*.js": [
-            "eslint --fix"
-          ]
+    "lint-staged": {
+        "*.(js|html|css|scss)": [
+            "npm run prettier:check"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
         }
-      
+    }
 }
