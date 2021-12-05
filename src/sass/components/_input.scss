@@ -1,0 +1,51 @@
+.searchbar .input-wrapper {
+    flex: 3 1 33%;
+    position: relative;
+    margin: 0;
+    display: flex;
+    max-width: 70%;
+
+    label {
+        border-bottom: 1px solid #333333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $body-font-size-medium;
+    }
+
+    .input-highlight {
+        font-size: 1.1rem;
+        user-select: none;
+        border-top: 1px solid $dark-400;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-width: 100%;
+        height: 0;
+        color: transparent;
+        font-family: $heading-font-family;
+        overflow: hidden;
+    }
+
+    input {
+        height: 1.5em;
+        width: 100%;
+        min-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent;
+        color: $dark-400;
+        border: none;
+        outline: none;
+        line-height: $heading-line-height;
+        border-bottom: 1px solid #333333;
+        font-size: $body-font-size-medium;
+        font-family: $heading-font-family;
+
+        &:focus {
+            + .input-highlight {
+                border-top: 3px solid $blue-500;
+            }
+        }
+    }
+}

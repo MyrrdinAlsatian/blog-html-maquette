@@ -1,0 +1,16 @@
+.top__link {
+    flex: 1 1 25%;
+    font-size: $heading-font-size-smallest;
+    &,
+    & ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        & li {
+            list-style: none;
+            margin-left: 0.33rem;
+        }
+    }
+}

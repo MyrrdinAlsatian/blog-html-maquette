@@ -34,8 +34,7 @@ $warning-400: hsl(40, 89%, 60%); //#F4B740
 $lineColor: hsla(0, 0%, 0%, 5%);
 
 /*Font*/
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Raleway&family=Source+Code+Pro&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Fira+Code&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap');
 $heading-font-family: 'Raleway', sans-serif;
 $body-font-family: 'Cabin', sans-serif;
 $code-font-family: 'Source Code Pro', monospace;

@@ -131,22 +131,22 @@ $iefix: 0.01px;
     }
     @each $affix, $size in $grid-gutters {
         &.has-gutter#{$affix} {
-            margin-right: -$size / 2;
-            margin-left: -$size / 2;
+            margin-right: -$size * 0.5;
+            margin-left: -$size * 0.5;
             & > * {
                 width: calc(100% / #{$grid-number} - #{$size} - #{$iefix});
-                margin-right: $size / 2;
-                margin-left: $size / 2;
+                margin-right: $size * 0.5;
+                margin-left: $size * 0.5;
             }
         }
     }
     @if ($own-gutter !=0) {
-        margin-right: -$own-gutter / 2;
-        margin-left: -$own-gutter / 2;
+        margin-right: -$own-gutter * 0.5;
+        margin-left: -$own-gutter * 0.5;
         & > * {
             width: calc(100% / #{$grid-number} - #{$own-gutter} - #{$iefix});
-            margin-right: $own-gutter / 2;
-            margin-left: $own-gutter / 2;
+            margin-right: $own-gutter * 0.5;
+            margin-left: $own-gutter * 0.5;
         }
     }
 }

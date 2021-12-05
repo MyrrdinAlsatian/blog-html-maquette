@@ -1,15 +1,32 @@
-.blog {
+.blogs-bloc {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @include respond-to(medium){
+        align-items: flex-start;
+    }
 
     &__list {
         list-style: none;
         margin: 0;
         padding: 0;
+        width: 100%;
+        @include respond-to(medium){
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+        }
     }
     &__item {
+
+        @include respond-to(medium){
+            max-width: calc(33% - 16px);
+            &:not(:last-of-type){
+                margin-right: 16px;
+            }
+        }
+
         &-article {
             position: relative;
         }

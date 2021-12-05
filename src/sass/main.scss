@@ -7,15 +7,27 @@
 @import 'base/utility';
 // @import "layout/grid";
 // @import "components/loader";
-@import 'components/btn';
-@import 'components/intro';
-@import 'components/bg_grid';
-@import 'components/navigation_bar';
+
+/* Home page */
+@import 'components/intro-section';
 @import 'components/hero';
 @import 'components/quick-link';
-@import 'components/case-study';
-@import 'components/blog';
-@import 'components/footer';
-@import 'components/blog-item';
+@import 'components/case-study-section';
+@import 'components/blogs-section';
+
+/* Blog */
 @import 'components/taglist';
+@import 'components/searchbar';
+@import 'components/top_link';
+@import 'components/blog/metadata';
+@import 'components/blog/text-bloc';
+
+/* General components */
+@import 'components/btn';
+@import 'components/bg_grid';
+@import 'components/navigation_bar';
+@import 'components/footer';
 @import 'components/title';
+@import 'components/input';
+
+@import 'page/single-blog';

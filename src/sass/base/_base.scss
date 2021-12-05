@@ -27,25 +27,34 @@ body {
 }
 
 .body__container {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // box-sizing: border-box;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // z-index: -4;
+    
 }
 
 main {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     padding: 0 var(--gap-body);
     transition: color 0.5s ease-in, background 0.5s linear;
     background: $off-white;
     z-index: -2;
+    @include respond-to(xtra){
+        $xtra-body-gap: calc(var(--gap-body) / 4); 
+        --xtra-body-gap: #{$xtra-body-gap};
+        max-width: calc($extra-large + var(--xtra-body-gap));
+        margin: auto;
+        padding: 0 var(--xtra-body-gap);
+    }
 }
 
 footer {
     z-index: -2;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     padding: 0 var(--gap-body);
     transition: color 0.5s ease-in, background 0.5s linear;

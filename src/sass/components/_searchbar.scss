@@ -1,0 +1,8 @@
+.searchbar {
+    grid-area: 1 / 1 / 2 / 6;
+    .row {
+        display: flex;
+        align-items: flex-end;
+        margin: $body-font-size-smallest 0;
+    }
+}

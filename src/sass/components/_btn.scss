@@ -13,7 +13,8 @@
         color: $dark-400;
     }
     &-primary {
-        font-size: 1.6rem;
+        // font-size: 1.6rem;
+        @include fluid-type(font-size, $tinny, $large, $body-font-size-medium, $body-font-size-large);
         color: $dark-400;
         display: inline-block;
         text-decoration: none;
